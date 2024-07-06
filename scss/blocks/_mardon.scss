@@ -1,65 +1,3 @@
-#header{
-    width: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 100;
-    margin-top: 40px;
-    padding-left: 55px;
-    }
-.header{
-    width: 100%;
-    @include display($direction:row, $items:center, $justify:space-between);
-    &__logo{
-        width: 48px;
-        height: 48px;
-        background-color: $primary-color;
-        border-radius: 50%;
-    }
-    &__nav{
-        &--list{
-            @include display($direction:row, $items:center, $justify:flex-start);
-            gap: 48px;
-            min-width: 830px;
-            width: 100%;
-            height: 100%;
-            backdrop-filter: blur(5px);
-            background-color: rgba(255, 255, 255, 0.04);
-            padding: 39px 0;
-            padding-left: 123px;
-            overflow: hidden;
-        }
-        &--link{
-                @include textStyle($fs:16px, $fw:400, $lh:19px, $clr: $primary-color, $mb:0px);
-                letter-spacing: 2.700000047683716px;
-                font-family: 'Barlow Condensed';
-                text-transform: uppercase;
-                font-family: Barlow Condensed;
-                position: relative;
-                overflow: hidden;
-                transition: all .3s ease;
-                &::after{
-                    content: "";
-                    position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    background-color: $primary-color;
-                    left: 0;
-                    bottom: -2px;
-                    z-index: -1;
-                    transition: all .3s ease;
-                }
-                &:hover{
-                    color: #000;
-                    &::after{
-                        height: 100%;
-                        border: 1px solid $primary-color;
-                    }
-                }
-        }
-    }
-}
-
 #hero{
     width: 100%;
     min-height: 100vh;
@@ -130,8 +68,58 @@
 @media (max-width:768px) {
     .hero{
         padding-top: 202px;
+        padding-bottom: 90px;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        &__info{
+            &--subtitle{
+                margin-bottom: 20px;
+                font-size: 24px;
+            }
+            &--title{
+                line-height: 150px;
+            }
+            &--text{
+                font-size: 16px;
+                line-height: 28px;
+            }
+        }
+        &__explore{
+            margin-top: 156px;
+            width: 242px;
+            height: 242px;
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .hero{
+        padding-top: 112px;
+        padding-bottom: 48px;
+        &__info{
+            &--subtitle{
+                margin-bottom: 19px;
+                font-size: 16px;
+                line-height: 19px;
+            }
+            &--title{
+                font-size: 80px;
+                line-height: 100px;
+            }
+            &--text{
+                font-size: 15px;
+                line-height: 25px;
+            }
+        }
+        &__explore{
+            margin-top: 81px;
+            width: 150px;
+            height: 150px;
+            &--link{
+                font-size: 20px;
+                line-height: 22px;
+            }
+        }
     }
 }

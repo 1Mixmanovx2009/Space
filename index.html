@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logo.svg">
     <link rel="stylesheet" href="./css/main.css">
     <title>Space</title>
 </head>
 <body>
-    <header id="header">
-        <div class="header_container">
+    <header class="site-header">
+        <div class="container">
             <div class="header">
                 <a class="header__logo" href="/">
                     <img src="./images/logo.svg" alt="logo" class="header__logo--img">
@@ -19,16 +20,21 @@
                             <a href="#" class="header__nav--link">00 Home</a>
                         </li>
                         <li class="header__nav--item">
-                            <a target="_blank" href="./deastination.html" class="header__nav--link">01 Destination</a>
+                            <a href="./deastination.html" class="header__nav--link">01 Destination</a>
                         </li>
                         <li class="header__nav--item">
-                            <a target="_blank" href="./crew.html" class="header__nav--link">02 Crew</a>
+                            <a href="./crew.html" class="header__nav--link">02 Crew</a>
                         </li>
                         <li class="header__nav--item">
-                            <a target="_blank" href="./tech.html" class="header__nav--link">03 Technology</a>
+                            <a href="./tech.html" class="header__nav--link">03 Technology</a>
                         </li>
                     </ul>
                 </nav>
+                <div class="header__burger">
+                    <span class="header__burger--line"></span>
+                    <span class="header__burger--line"></span>
+                    <span class="header__burger--line"></span>
+                </div>
             </div>
         </div>
     </header>
@@ -52,5 +58,7 @@
             </div>
         </section>
     </main>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
