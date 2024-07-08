@@ -57,7 +57,20 @@
                             </div>
                         </div>
                         <div class="technology__img-wrapper">
-                            <img class="technology__img" src="./images/tech-img.png" alt="">
+                            <picture>
+                                <source class="tech-img2"
+                                  media="(min-width:768px)"
+                                  srcset="./images/tech-img.png"
+                                />
+                                <source
+                                  media="(min-width: 768px)"
+                                  srcset="./images/tech-img2.png" 
+                                />
+                                <img class="tech-img2"
+                                  srcset="./images/tech-img2.png"
+                                  alt="Фотографии гостей"
+                                />
+                            </picture>
                         </div>
                     </div>
                 </div>

@@ -592,7 +592,7 @@
   }
 }
 .technology-body {
-  width: 100%;
+  max-width: 100vh;
   background-image: url("../../images/tech-bg.jpg");
   background-size: cover;
   background-position: center;
@@ -655,9 +655,6 @@
   cursor: pointer;
 }
 .technology__namber:hover {
-  width: 80px;
-  height: 80px;
-  padding: 22px 32px;
   border-radius: 50%;
   border: solid 1px white;
   background-color: white;
@@ -716,7 +713,7 @@
 }
 
 .technology__text-bottom {
-  width: 444px;
+  max-width: 444px;
   font-size: 18px;
   font-weight: 400;
   line-height: 32px;
@@ -725,11 +722,81 @@
 }
 
 .technology__img-wrapper {
-  width: 515px;
+  max-width: 100%;
   height: 527px;
   margin-right: 0px;
 }
 
+@media (max-width: 768px) {
+  .technology__text {
+    margin-bottom: 26px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24 px;
+    color: #fff;
+    margin-bottom: 64px;
+  }
+  .technology__span {
+    margin-right: 16px;
+  }
+  .technology__main {
+    flex: column;
+    flex-direction: column-reverse;
+  }
+  .technology__namber {
+    width: 58px;
+    height: 58px;
+    padding: 14px 24px 18px 20px;
+    padding-bottom: 17px;
+  }
+  .technology__img-wrapper {
+    width: 100%;
+    height: 310px;
+    margin-inline: auto;
+    align-items: center;
+  }
+  .tech-img2 {
+    max-width: 100%;
+    height: 310px;
+    margin-right: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .technology__info {
+    flex-direction: column;
+  }
+  .technology__nambers {
+    max-width: 210px;
+    gap: 16px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+  .technology__text-top {
+    text-align: center;
+    margin-left: 30px;
+    letter-spacing: 2.7px;
+  }
+  .technology__title {
+    max-width: 360px;
+    text-align: center;
+    margin: auto;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 45.84px;
+    color: white;
+    margin-bottom: 16px;
+  }
+  .technology__text-bottom {
+    max-width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: white;
+    margin-bottom: 17px;
+  }
+}
 .crew__main {
   background-image: url(../../images/crew-bg.png);
   height: 900px;

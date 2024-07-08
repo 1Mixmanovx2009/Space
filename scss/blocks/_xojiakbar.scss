@@ -1,5 +1,5 @@
 .technology-body {
-  width: 100%;
+  max-width: 100vh;
   background-image: url("../../images/tech-bg.jpg");
   background-size: cover;
   background-position: center;
@@ -55,9 +55,6 @@
   transition: all .3s ease;
   cursor: pointer;
   &:hover{
-    width: 80px;
-    height: 80px;
-    padding: 22px 32px;
     border-radius: 50%;
     border: solid 1px white;
     background-color: white;
@@ -98,12 +95,88 @@
 }
 
 .technology__text-bottom {
-  width: 444px;
+  max-width: 444px;
   @include  textStyle($fs:18px, $fw:400, $lh:32px, $clr:white, $mb:17px);
 }
 
 .technology__img-wrapper {
-  width: 515px;
+  max-width: 100%;
   height: 527px;
   margin-right: 0px;
+}
+
+
+@media  (max-width:768px) {
+
+  .technology {
+  }
+
+  .technology__text {
+    margin-bottom: 26px;
+    @include textStyle($fs:20px, $fw:400, $lh:24 px, $clr:$primary-color, $mb:64px);
+  }
+  .technology__span{
+    margin-right: 16px;
+  }
+
+  .technology__main {
+    flex: column;
+    flex-direction: column-reverse;
+  }
+
+  .technology__namber {
+    width: 58px;
+    height: 58px;
+    padding: 14px 24px 18px 20px;
+    padding-bottom: 17px;
+  }
+
+  .technology__img-wrapper {
+    width: 100%;
+    height: 310px;
+    margin-inline: auto;
+    align-items: center;
+  }
+
+  .tech-img2 {
+    max-width: 100%;
+    height: 310px;
+    margin-right: auto;
+    // align-items: center;
+    object-fit: cover;
+  }
+
+  .technology__info {
+    flex-direction: column;
+  }
+
+  .technology__nambers {
+    max-width: 210px;
+    gap: 16px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    // display: grid;
+    // grid-template-columns: auto;
+  }
+
+  .technology__text-top {
+    // width: 155px;
+    text-align: center;
+    margin-left: 30px;
+    letter-spacing: 2.7px;
+  }
+
+  .technology__title {
+    max-width: 360px;
+    text-align: center;
+    margin: auto;
+    @include  textStyle($fs:40px, $fw:400, $lh:45.84px, $clr:white, $mb:16px);
+  }
+
+  .technology__text-bottom {
+    max-width: 100%;
+    text-align: center;
+    @include  textStyle($fs:16px, $fw:400, $lh:28px, $clr:white, $mb:17px);
+  }
 }
